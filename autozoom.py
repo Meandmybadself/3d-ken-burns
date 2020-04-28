@@ -75,7 +75,7 @@ if __name__ == '__main__':
 	print(intWidth)
 	print(intHeight)
 
-	npyImage = cv2.reshape(src=npyImage, dsize=(intWidth, intHeight), fx=0.0, fy=0.0, interpolation=cv2.INTER_AREA)
+	npyImage = cv2.resize(src=npyImage, dsize=(intWidth, intHeight), fx=0.0, fy=0.0, interpolation=cv2.INTER_AREA)
 
 	process_load(npyImage, {})
 
