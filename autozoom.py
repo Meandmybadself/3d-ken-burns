@@ -61,6 +61,7 @@ for strOption, strArgument in getopt.getopt(sys.argv[1:], '', [ strParameter[2:]
 ##########################################################
 
 if __name__ == '__main__':
+	print(arguments_strIn)
 	npyImage = cv2.imread(filename=arguments_strIn, flags=cv2.IMREAD_COLOR)
 
 	intWidth = npyImage.shape[1]
@@ -70,6 +71,9 @@ if __name__ == '__main__':
 
 	intWidth = min(int(1024 * fltRatio), 1024)
 	intHeight = min(int(1024 / fltRatio), 1024)
+	
+	print(intWidth)
+	print(intHeight)
 
 	npyImage = cv2.resize(src=npyImage, dsize=(intWidth, intHeight), fx=0.0, fy=0.0, interpolation=cv2.INTER_AREA)
 
